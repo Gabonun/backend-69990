@@ -1,0 +1,20 @@
+<h1>Producto en BD</h1>
+{{#each productos}}
+<div>
+    <h2>{{name}}</h2>
+    <p>{{_id}}</p>
+    <p>{{description}}</p>
+    <p>Precio: ${{price}}</p>
+    <p>Categoría: {{category}}</p>
+    <button>Agregar al Carrito</button>
+</div>
+{{/each}}
+
+{{#if hasNextPage}}
+    <a href="/products?page={{nextPage}}">Siguiente</a>
+{{/if}}
+{{#if hasPrevPage}}
+    <a href="/products?page={{prevPage}}">Anterior</a>
+{{/if}}
+
+<p>Pagina {{currentPage}} de {{totalPages}}</p>
